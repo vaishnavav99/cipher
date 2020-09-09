@@ -57,18 +57,15 @@ def decrypt(messageVector):
         plainMatrix[i][j] += (np.inverseKeyMatrix[i][x] * messageVector[x][j])
       plainMatrix[i][j] = plainMatrix[i][j] % 26
 
-def main():
-  message = input("Enter 3 no. of string:")
-  message = message.upper()
-  key = input("Enter the Key:")
-  key = key.upper()
-  ch=int(input("1.Encryption\n2.Decryption\nEnter the choice:"))
-  if ch == 1:
-    HillCipher1(message, key)
-  elif ch == 2:
-    HillCipher2(message,key)
-  else:
-    print("Wrong input")
 
-if __name__ == "__main__": 
-    main()
+message = input("Enter 3 no. of string:")
+message = message.upper()
+key = input("Enter the Key:")
+key = key.upper()
+ch=int(input("1.Encryption\n2.Decryption\nEnter the choice:"))
+if ch == 1:
+  HillCipher1(message, key)
+elif ch == 2:
+  HillCipher2(message,key)
+else:
+  print("Wrong input")
